@@ -71,6 +71,28 @@ ul {
   border-bottom: 2px solid gray;
 }
 
+input[type=checkbox]{
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  }
+/* 
+input[type=checkbox]:checked ~ label {
+       color: var(--button-hovered-color);
+}
+
+input[type=checkbox]:checked ~ label::after {
+  display: block;
+  float: none;
+  margin: 0 auto;
+  background-image: url("../assets/accordion.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+  width: 20rem;
+  height: 20rem;
+  content:"";
+} */
+
 li{
   width: 100%;
 }
@@ -88,6 +110,15 @@ li:nth-child(n+2)::after{
   width: 1rem;
 }
 
+
+li:nth-child(n+2):hover::before{
+  display: block;
+  float: right;
+  content: url("../assets/xmark-solid.svg");
+  height: 1rem;
+  width: 1rem;
+}
+
 li:nth-child(n+2):hover::after{
   display: block;
   float: none;
@@ -99,5 +130,18 @@ li:nth-child(n+2):hover::after{
   height: 20rem;
   content:"";
 }
+
+li:nth-child(n+2):focus::after{
+  display: block;
+  float: none;
+  margin: 0 auto;
+  background-image: url("../assets/accordion.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+  width: 20rem;
+  height: 20rem;
+  content:"";
+}
+
 
 
