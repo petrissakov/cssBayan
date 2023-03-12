@@ -29,6 +29,8 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    transition-duration: 0.3s;
+    transform-style: flat;
   }
 
   body {
@@ -69,6 +71,15 @@ ul {
   border-bottom: 2px solid gray;
 }
 
+li{
+  width: 100%;
+}
+
+li:hover{
+  color: var(--button-hovered-color);
+
+}
+
 li:nth-child(n+2)::after{
   display: block;
   float: right;
@@ -77,9 +88,16 @@ li:nth-child(n+2)::after{
   width: 1rem;
 }
 
-li:hover{
-  color:#1294ab;
-  content: url("../assets/");
+li:nth-child(n+2):hover::after{
+  display: block;
+  float: none;
+  margin: 0 auto;
+  background-image: url("../assets/accordion.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+  width: 20rem;
+  height: 20rem;
+  content:"";
 }
 
 
