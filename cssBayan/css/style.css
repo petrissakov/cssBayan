@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "Red Hat Text";
+    src: url("../fonts/RedHatText-Medium.ttf");
+    font-weight: 500;
+  }
+
+:root {
+    --page-max-width: 1440px;
+    --page-max-height: 1080px;
+    --default-font-size: 20px;
+    --primary-font: 500 1.6rem/2.1rem "Red Hat Text", sans-serif;
+   
+    --primary-color: #ffffff;
+    --secondary-color: #dac488;
+    --tertiary-color: #0d606f;
+    --button-hovered-color: #1294ab;
+    --header-bg-color: rgba(242, 120, 92, 0.7);
+    --shadow-bg-color: rgba(255, 255, 255, 0.7);
+    --mobile-header-bg: linear-gradient(180deg,
+        #0d606f 0%,
+        rgba(13, 96, 111, 0) 25.1%);
+}
+  
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  html {
+    font-size: var(--default-font-size);
+    background-color: var(--primary-color);
+  }
+  .wrapper {
+    position: relative;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  
+    margin: 0 auto;
+    min-height: 100vh;
+    max-width: var(--page-max-width);
+    min-width: 320px;
+  }
+
+main{
+    font: var(--primary-font)
+
+}
+
+ul {
+    margin: 0 15rem;
+    display: flex;
+    flex-direction: column;
+    list-style: None
+}
+
+.bayan_item, .bayan_header{
+  border-bottom: 2px solid gray;
+}
+
+li:nth-child(n+2)::after{
+  display: block;
+  float: right;
+  content: url("../assets/plus-solid.svg");
+  height: 1rem;
+  width: 1rem;
+}
+
+li:hover{
+  color:#1294ab;
+  content: url("../assets/");
+}
+
+
